@@ -205,7 +205,7 @@ open class XMSegmentedControl: UIView {
     /// Initializes and returns a newly allocated XMSegmentedControl object with the specified frame rectangle. It sets the segments of the control from the given `segmentTitle` array and the highlight style for the selected item.
     public init (frame: CGRect, segmentTitle: [String], selectedItemHighlightStyle: XMSelectedItemHighlightStyle) {
         super.init (frame: frame)
-        
+        print("Initializing Segmented Titles \(segmentTitle)")
         self.commonInit(segmentTitle, highlightStyle: selectedItemHighlightStyle)
     }
     
@@ -236,7 +236,9 @@ open class XMSegmentedControl: UIView {
     /// Common initializer.
     fileprivate func commonInit(_ data: Any, highlightStyle: XMSelectedItemHighlightStyle) {
         if let segmentTitle = data as? [String] {
+            print("IN COMMON INIT: segmentTitle = \(segmentTitle)")
             self.segmentTitle = segmentTitle
+            print("POST COMMON INIT: segmentTitle = \(segmentTitle)")
         } else if let segmentIcon = data as? [UIImage] {
             self.segmentIcon = segmentIcon
         } else if let segmentContent = data as? ([String], [UIImage]) {
@@ -287,6 +289,7 @@ open class XMSegmentedControl: UIView {
                     tab.setTitle(segmentTitle[i], for: UIControl.State())
                     tab.setTitleColor(i == selectedSegment ? highlightTint : tint, for: UIControl.State())
                     tab.titleLabel?.font = font
+                    print("UPD LOOP: Title Set: \(segmentTitle[i])")
                 case .hybrid:
                     let insetAmount: CGFloat = 8 / 2.0
                     tab.imageEdgeInsets = UIEdgeInsets(top: 12, left: -insetAmount, bottom: 12, right: insetAmount)
@@ -370,7 +373,7 @@ open class XMSegmentedControl: UIView {
         
         if contentType == .text {
             guard segmentTitle.count > 0 else {
-                print("segment titles (segmentTitle) are not set")
+                print("segment titles \(segmentTitle.count) are not set")
                 return
             }
             

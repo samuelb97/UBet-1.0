@@ -11,6 +11,11 @@ import UIKit
 
 let SHADOW_GRAY: CGFloat = 120.0 / 255.0
 
+let DEFAULT_ORANGE = UIColor(red: 255/255, green: 152/255, blue: 0/255, alpha: 1)
+
+let KEY_UID = "uid"
+
+
 
 
 

@@ -45,5 +45,29 @@
 	<array>
 		<string>Championship.ttf</string>
 	</array>
+    
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb846633808878741</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>846633808878741</string>
+    <key>FacebookDisplayName</key>
+    <string>UBet-1.0</string>
+    
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
 </dict>
 </plist>

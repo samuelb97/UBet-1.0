@@ -6,5 +6,12 @@ target 'UBet-1-0' do
   use_frameworks!
 
   # Pods for UBet-1-0
+   pod 'FBSDKLoginKit'
    pod 'MenuSlider', '~> 0.1.5'
+   pod 'Firebase/Core'
+   pod 'Firebase/Auth'
+   pod 'Firebase/Database'
+   pod 'Firebase/Storage'
+   pod 'SwiftKeychainWrapper'
+  
 end

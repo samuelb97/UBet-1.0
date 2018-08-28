@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class UserInfo {
+    
+    var email: String!
+    var pwd: String!
+    var firstName: String!
+    var lastName: String!
+    
+}
